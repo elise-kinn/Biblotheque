@@ -78,3 +78,35 @@ form{
         }
     }
 }
+
+/* LIVRE SUPPRIMER.PHP */
+
+#question-supp{
+    text-align: center;
+    margin-top : 5px
+}
+
+#book-delete-article{
+    margin : auto;
+    max-width: 300px;
+    margin-top : 30px;
+
+    #yes-no-container{
+        display: flex;
+        justify-content: space-between;
+        margin-top : 15px;
+
+        *{
+            font-weight: 700;
+            font-size: 20px;
+            
+            &:hover{
+                color : rgb(243, 158, 179) ;
+            }
+        }
+    }
+
+    *{
+        text-align: center;
+    }
+}

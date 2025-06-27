@@ -25,7 +25,7 @@ foreach($books as $book): ?>
         <p><?=$book['prenom_auteur']?> <?=$book['nom_auteur']?> (<?=$book['annee_publication']?>)</p>
         <p><?= $book['nom_genre']?></p>
         <a href="modifier.php?id=<?=$book['id_livre']?>" id="edition-book">Modifier</a>
-        <a href="supprimer.php?id=<?=$book['id_livre']?>"  id="delete-book">Supprimer</a>
+        <a href="supprimer.php?id=<?=$book['id_livre']?>&confirmation=no"  id="delete-book">Supprimer</a>
     </article>
 <?php
 endforeach
