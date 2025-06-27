@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des livres</title>
+    <link rel="stylesheet" href="/bibliotheque-php/css/style.css">
 </head>
 <body>
     <h1>Liste des livres</h1>
@@ -23,8 +24,8 @@ foreach($books as $book): ?>
         <h2><?=$book['titre']?> </h2>
         <p><?=$book['prenom_auteur']?> <?=$book['nom_auteur']?> (<?=$book['annee_publication']?>)</p>
         <p><?= $book['nom_genre']?></p>
-        <a href="modifier.php?id='<?=$book['id_livre']?>'" id="edition-book">Modifier</a>
-        <a href="supprimer.php?id='<?=$book['id_livre']?>'"  id="delete-book">Supprimer</a>
+        <a href="modifier.php?id=<?=$book['id_livre']?>" id="edition-book">Modifier</a>
+        <a href="supprimer.php?id=<?=$book['id_livre']?>"  id="delete-book">Supprimer</a>
     </article>
 <?php
 endforeach
