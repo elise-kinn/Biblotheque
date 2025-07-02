@@ -35,7 +35,7 @@
 
         </select>
 
-        <label for="annee">Année de publication</label>
+        <label for="annee">Année de parution</label>
         <input type="text" id="annee" name="annee">
 
         <label for="genre">Genre</label>

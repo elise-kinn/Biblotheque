@@ -14,7 +14,7 @@
         require_once(__DIR__ . '/../config/db.php');
         $id = $_GET['id'] ?? 0;
 
-        $stmt2 = $pdo->prepare('SELECT titre, annee_publication FROM livres WHERE id_livre=:id');
+        $stmt2 = $pdo->prepare('SELECT titre, annee_publication, fk_id_auteur, fk_id_genre FROM livres WHERE id_livre=:id');
         $stmt2->execute(array('id' => $id));
 
         $book = $stmt2->fetch();
@@ -34,7 +34,10 @@
                 $livres = $stmt->fetchAll();
 
                 foreach ($livres as $livre): ?>
-                    <option value="<?=$livre['id_auteur']?>"><?= $livre['prenom_auteur'] . ' ' . $livre['nom_auteur'] ?></option>
+                    <option 
+                        value="<?=$livre['id_auteur']?>" <?=$livre['id_auteur'] == $book['fk_id_auteur'] ? 'selected' : '' ?>>
+                        <?= $livre['prenom_auteur'] . ' ' . $livre['nom_auteur'] ?>
+                    </option>
 
             <?php
             endforeach
@@ -42,7 +45,7 @@
 
         </select>
 
-        <label for="annee">Année de publication</label>
+        <label for="annee">Année de parution</label>
         <input type="text" id="annee" name="annee" value="<?=$book['annee_publication']?>">
 
         <label for="genre">Genre</label>
@@ -55,7 +58,10 @@
                 $livres = $stmt4->fetchAll();
 
                 foreach ($livres as $livre): ?>
-                    <option value="<?=$livre['id_genre']?>"><?= $livre['nom_genre']?></option>
+                    <option 
+                        value="<?=$livre['id_genre']?>" <?=$livre['id_genre'] == $book['fk_id_genre'] ? 'selected' : '' ?>>
+                        <?= $livre['nom_genre']?>
+                    </option>
 
             <?php
             endforeach

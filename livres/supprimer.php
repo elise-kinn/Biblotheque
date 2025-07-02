@@ -42,7 +42,6 @@
             $stmt2->execute(array('id' => $id));
 
             if($stmt->rowCount() > 0){
-                // on redirige sur la page d'accueil des membres
                 header('Location: liste.php');
             } else {
                 exit("Une erreur s'est produite.");
