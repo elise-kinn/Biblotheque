@@ -26,12 +26,12 @@
         $book = $stmt->fetch();
     ?>
 
-    <article id="book-delete-article">
+    <article id="delete-article">
         <h2><?=$book['titre']?> </h2>
         <p><?=$book['prenom_auteur']?> <?=$book['nom_auteur']?> (<?=$book['annee_publication']?>)</p>
         <p><?= $book['nom_genre']?></p>
         <div id="yes-no-container">
-            <a href="?confirmation=yes&id=<?=$book['id_livre']?>">OUI, Supprimer</a>
+            <a href="?confirmation=yes&id=<?=$book['id_livre']?>"  id="yes-delete">OUI, Supprimer</a>
             <a href="liste.php">NON, Annuler</a>
         </div>
     </article>
