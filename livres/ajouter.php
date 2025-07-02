@@ -9,7 +9,7 @@
 <body>
 
     <h1>Ajouter un livre</h1>
-    <a href="liste.php" id="liste-livre">Voir la liste complète de livres</a>
+    <a href="liste.php" id="list">Retour à la liste complète de livres</a>
     
     <form action="#" method="POST">
         <label for="titre">Titre</label>
@@ -87,7 +87,7 @@ if(!empty($_POST['add'])){
     if($stmt1->rowCount() > 0){
         echo "Nouveau livre ajouté avec succès !";
     } else {
-      echo "Aucune ligne insérée :(";
+        echo "Aucun livre insérée :(";
     }
 }
 ?>
