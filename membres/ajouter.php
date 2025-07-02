@@ -27,8 +27,6 @@
     <?php
         require_once(__DIR__ . '/../config/db.php');
 
-
-
         if(!empty($_POST['add'])){
 
             $stmt_mail = $pdo->prepare('SELECT COUNT(email) AS emailCount FROM membres WHERE email = :email');
@@ -36,7 +34,7 @@
                 'email' => $_POST['email']
             ));
 
-            $res = $stmt_mail->fetch(PDO::FETCH_ASSOC); // Le resultat est retourné en Tableau associatif
+            $res = $stmt_mail->fetch(PDO::FETCH_ASSOC); // Le resultat est retourné en tableau associatif
             
             if($res['emailCount'] == 0){
                 $prenom = $_POST['prenom'];

@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Modifier un livre</h1>
-    <a href="liste.php" id="liste-livre">Voir la liste complète de livres</a>
+    <a href="liste.php" id="list">Retour à la liste complète de livres</a>
 
     <?php
         require_once(__DIR__ . '/../config/db.php');
