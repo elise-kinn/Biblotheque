@@ -10,8 +10,10 @@
 <body>
     <h1>Liste des inscrits</h1>
     <a href="ajouter.php" id="add">Ajouter un membre</a>
-    <a href="http://localhost/bibliotheque-php/livres/liste.php" id="list">Voir la liste des livres</a>
-    
+    <a href="../livres/liste.php" class="list">Voir la liste des livres</a>
+    <a href="../auteurs/liste.php" class="list">Voir la liste des auteurs</a>
+    <a href="../emprunts/liste.php" class="list">Voir la liste des emprunts</a>
+
     <div id="container">
         <?php
             require_once(__DIR__. '/../config/db.php');
@@ -25,7 +27,7 @@
             <article id="article">
                 <div id="group-member">
                     <h2><?=$membre['prenom_membre']?> <?=$membre['nom_membre']?></h2>
-                    <p><?=$membre['email']?></p>
+                    <p id="email-p"><?=$membre['email']?></p>
                 </div>
                 <p id="email">Date d'inscription : <?=$membre['date_inscription']?></p>
                 <a href="modifier.php?id=<?=$membre['id_membre']?>" id="edition">Modifier</a>

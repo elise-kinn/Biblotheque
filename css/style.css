@@ -24,9 +24,11 @@ h1{
     grid-template-columns: 1fr;
     gap : 15px;
     row-gap: 40px;
-    max-width: 400px;
+    /* max-width: 400px; */
+    width : fit-content;
     margin : auto; 
     margin-bottom : 50px;
+    margin-top : 25px
 }
 
 #article{
@@ -37,13 +39,12 @@ h1{
 }
 
 #add{
-    margin-bottom : 0px !important;
+    margin-bottom : 12px !important;
 }
 
-#add, #list{
+#add, .list{
     display: block;
     text-align: center;
-    margin-bottom : 25px;
     font-size: 23px;
 
     &:hover{
@@ -60,6 +61,10 @@ h1{
     }
 }
 
+#email-p{
+    padding-left : 50px
+}
+
 /* LIVRES/AJOUTER.PHP  */
 form{
     max-width:400px ;
@@ -67,6 +72,7 @@ form{
     display: flex;
     flex-direction: column;
     gap : 5px;
+    margin-top : 25px;
 
     input[type="text"], input[type="email"]{
         padding : 7px;
@@ -136,4 +142,8 @@ form{
 
 #email{
     text-align: end;
+}
+
+.bold{
+    font-weight: 700;
 }
