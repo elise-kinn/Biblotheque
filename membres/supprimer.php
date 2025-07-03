@@ -38,7 +38,7 @@
                 'id' => $id
             ));
 
-            if($stmt->rowCount() > 0){
+            if($stmt2->rowCount() > 0){
                 header('Location: liste.php');
             } else {
                 exit("Une erreur s'est produite.");

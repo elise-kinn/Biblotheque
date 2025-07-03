@@ -60,37 +60,37 @@
 
     </form>
 
-<?php
+    <?php
 
-if(!empty($_POST['add'])){
-    $titre = $_POST['titre'];
-    $auteur_id = $_POST['auteur'];
-    $annee = $_POST['annee'];
-    $genre_id = $_POST['genre'];
+    if(!empty($_POST['add'])){
+        $titre = $_POST['titre'];
+        $auteur_id = $_POST['auteur'];
+        $annee = $_POST['annee'];
+        $genre_id = $_POST['genre'];
 
-    if(empty($titre) || empty($auteur_id) || empty($annee) || empty($genre_id)){
-      exit("Vous devez renseigner tous les champs :(");
-    };
+        if(empty($titre) || empty($auteur_id) || empty($annee) || empty($genre_id)){
+        exit("Vous devez renseigner tous les champs :(");
+        };
 
-    if(!ctype_digit($annee) || strlen($annee) !== 4 || intval($annee) > intval(date('Y'))){
-        exit("L'année de publication est invalide :(");
-    }  
+        if(!ctype_digit($annee) || strlen($annee) !== 4 || intval($annee) > intval(date('Y'))){
+            exit("L'année de publication est invalide :(");
+        }  
 
-    $stmt1 = $pdo->prepare('INSERT INTO livres (titre, annee_publication, fk_id_genre, fk_id_auteur) VALUES (:titre, :annee, :fk_id_genre, :fk_id_auteur)');
-    $stmt1->execute(array(
-        'titre' => $titre,
-        'annee' => $annee, 
-        'fk_id_genre' => $genre_id, 
-        'fk_id_auteur' => $auteur_id
-    ));
+        $stmt1 = $pdo->prepare('INSERT INTO livres (titre, annee_publication, fk_id_genre, fk_id_auteur) VALUES (:titre, :annee, :fk_id_genre, :fk_id_auteur)');
+        $stmt1->execute(array(
+            'titre' => $titre,
+            'annee' => $annee, 
+            'fk_id_genre' => $genre_id, 
+            'fk_id_auteur' => $auteur_id
+        ));
 
-    if($stmt1->rowCount() > 0){
-        echo "Nouveau livre ajouté avec succès !";
-    } else {
-        echo "Aucun livre insérée :(";
+        if($stmt1->rowCount() > 0){
+            echo "Nouveau livre ajouté avec succès !";
+        } else {
+            echo "Aucun livre insérée :(";
+        }
     }
-}
-?>
+    ?>
 
 </body>
 </html>

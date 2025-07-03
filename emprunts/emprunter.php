@@ -67,13 +67,13 @@
                 exit("Vous devez remplir tous les champs :(");
             }
 
-            if($date_prevue <= date('y-m-d')){
+            if($date_prevue < date('Y-m-d')){
                 exit("La date de retour prévu est incohérente :(");
             }
 
             $stmt3 = $pdo->prepare('INSERT INTO emprunts(date_emprunt, date_retour_prevu, fk_id_livre, fk_id_membre) VALUES (:date_actuelle, :date_prevue, :id_livre, :id_membre)');
             $stmt3->execute(array(
-                'date_actuelle' => date('y-m-d'), 
+                'date_actuelle' => date('Y-m-d'), 
                 'date_prevue' => $date_prevue,
                 'id_livre' => $id_livre,
                 'id_membre' => $id_membre

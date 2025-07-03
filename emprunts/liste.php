@@ -9,7 +9,6 @@
 <body>
     <h1>Liste des emprunts</h1>
     <a href="emprunter.php" class="list">Enregistrer un emprunt de livre</a>
-    <a href="rendre.php" class="list">Enregistrer un retour de livre</a>
     <a href="historique.php" id="add">Historique des livres empruntés et rendus</a>
 
     <a href="../livres/liste.php" class="list">Voir la liste des livres</a>
@@ -33,7 +32,14 @@
                 <p>Date d'emprunt : <span class="bold"><?=$emprunt['date_emprunt']?></span></p>
                 <p>Date de retour : <span class="bold"><?=$emprunt['date_retour_reel'] ? $emprunt['date_retour_reel'] : "LIVRE NON RENDU" ?></span></p>
             </div>
+            <div id="group-member">
             <p>Date de retour prévu : <span class="bold"><?=$emprunt['date_retour_prevu']?></span></p>
+
+            <?= empty($emprunt['date_retour_reel']) 
+                ? '<a href="rendre.php?id='.$emprunt['id_emprunt'].'&confirmation=no" id="edition">Enregistrer son retour</a>' 
+                : '' 
+            ?>
+            </div>
         </article>
         <?php
             endforeach
