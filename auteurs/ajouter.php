@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Ajouter un auteur</h1>
-    <a href="liste.php" id="list">Retour à la liste des auteurs</a>
+    <a href="liste.php" class="list">Retour à la liste des auteurs</a>
 
     <form method="POST">
         <label for="prenom_auteur">Prénom</label>

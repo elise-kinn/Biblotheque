@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Modifier un auteur</h1>
-    <a href="liste.php" id="list">Retour à la liste des auteurs·es</a>
+    <a href="liste.php" class="list">Retour à la liste des auteurs·es</a>
 
     <?php
         require_once(__DIR__. '/../config/db.php');

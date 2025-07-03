@@ -9,7 +9,7 @@
 <body>
 
     <h1>Ajouter un livre</h1>
-    <a href="liste.php" id="list">Retour à la liste complète de livres</a>
+    <a href="liste.php" class="list">Retour à la liste complète de livres</a>
     
     <form action="#" method="POST">
         <label for="titre">Titre</label>

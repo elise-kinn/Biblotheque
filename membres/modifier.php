@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Modifier un membre</h1>
-    <a href="liste.php" id="list">Retour à la liste complète des membres</a>
+    <a href="liste.php" class="list">Retour à la liste complète des membres</a>
 
     <?php
         require_once(__DIR__ . '/../config/db.php');
