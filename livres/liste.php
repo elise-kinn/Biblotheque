@@ -9,7 +9,7 @@
 <body>
     <h1>Liste des livres</h1>
     <a href="ajouter.php" id="add">Ajouter un livre</a>
-    <a href="../membres/liste.php" class="list">Voir la liste des membres inscrits</a>
+    <a href="../membres/liste.php" class="list">Voir la liste des membres</a>
     <a href="../auteurs/liste.php" class="list">Voir la liste des auteurs</a>
     <a href="../emprunts/liste.php" class="list">Voir la liste des emprunts</a>
 

@@ -10,7 +10,7 @@
     <h1>Liste des auteurs</h1>
     <a href="ajouter.php" id="add">Ajouter un auteur</a>
     <a href="../livres/liste.php" class="list">Voir la liste des livres</a>
-    <a href="../membres/liste.php" class="list">Voir la liste des membres inscrits</a>
+    <a href="../membres/liste.php" class="list">Voir la liste des membres</a>
     <a href="../emprunts/liste.php" class="list">Voir la liste des emprunts</a>
 
     <div id="container">

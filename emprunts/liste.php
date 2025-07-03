@@ -9,10 +9,10 @@
 <body>
     <h1>Liste des emprunts</h1>
     <a href="emprunter.php" class="list">Enregistrer un emprunt de livre</a>
-    <a href="historique.php" id="add">Historique des livres empruntés et rendus</a>
+    <a href="historique.php" id="add">Historique des emprunts rendus</a>
 
     <a href="../livres/liste.php" class="list">Voir la liste des livres</a>
-    <a href="../membres/liste.php" class="list">Voir la liste des membres inscrits</a>
+    <a href="../membres/liste.php" class="list">Voir la liste des membres</a>
     <a href="../auteurs/liste.php" class="list">Voir la liste des auteurs</a>
 
     <div id="container">
